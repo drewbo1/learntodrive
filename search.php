@@ -228,7 +228,7 @@ var map;
 </script>
 </section>
 <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA-PHh6EIEpjQxpL6NMSKBq3bUqWRATrjg&callback=initMap">
+    src="*************">
     </script>
 <footer>
   <p>Learn to Drive NI, Copyright &copy; 2018</p>
