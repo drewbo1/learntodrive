@@ -43,17 +43,17 @@
   <h1 class="page-title">Services</h1>
   <ul id="services">
     <li>
-      <h3>Website Design</h3>
+      <h3>Service 1</h3>
       <p>Morbi dapibus, est eget rhoncus suscipit, tellus lorem consequat nunc, convallis eu sit amet ex. Suspendisse ligula risus, ornare vitae condimentum ut, consequat ut nulla. Sed quis nisl diam. In cursus ut velit eget convallis. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In euismod magna et ultrices auctor.</p>
       <p>Pricing £500 - £1500</p>
     </li>
     <li>
-      <h3>Website Hosting</h3>
+      <h3>Service 2</h3>
       <p>Morbi dapibus, est eget rhoncus suscipit, tellus lorem consequat nunc, . Ut ac justo sit amet est cursus convallis eu sit amet ex. Suspendisse ligula risus, ornare vitae condimentum ut, consequat ut nulla. Sed quis nisl diam. In cursus ut velit eget convallis. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In euismod magna et ultrices auctor.</p>
       <p>Pricing £20 per month</p>
     </li>
     <li>
-      <h3>Website Maintainance</h3>
+      <h3>Service 3</h3>
       <p>Morbi dapibus, est eget rhoncus suscipit, tellus lorem consequat nunc,. Suspendisse ligula risus, ornare vitae condimentum ut, consequat ut nulla. Sed quis nisl diam. In cursus ut velit eget convallis. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In euismod magna et ultrices auctor.</p>
       <p>Pricing £150 per month</p>
     </li>
