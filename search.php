@@ -117,7 +117,7 @@ if($link === false){
   die("ERROR: could not connect. ". mysqli_connect_error());
 }
 
-$sql = "SELECT * FROM doctors_table LIMIT 10";
+$sql = "SELECT * FROM doctor_data LIMIT 10";
 
 if($result = mysqli_query($link, $sql)){
   if(mysqli_num_rows($result) > 0){
@@ -148,23 +148,21 @@ if($result = mysqli_query($link, $sql)){
     	  </div>';
 
         while($row = mysqli_fetch_array($result)) {
-          $name = $row['Name'];
+          $name = $row['GP Name'];
           $address1 = $row["Address1"];
           $address2 = $row["Address2"];
           $address3 = $row["Address3"];
-          $city = $row["City"];
-          $county = $row["County"];
           $postcode = $row["Postcode"];
           $phone = $row["Phone"];
-          $latitude = $row["Latitude"];
-          $longitude = $row["Longitude"];
+          $latitude = $row["lat"];
+          $longitude = $row["long"];
 
-          $locations[]=array("name"=>$name,
+          $locations[]=array("GP Name"=>$name,
           //"add1"=>$address1,
           //"add2"=>$address2,
           //"add3"=>$address3,
-          //'city'=>$city,
-          //'county'=>$county,
+          
+         
           //'postcode'=>$postcode,
           //'phone'=>$phone,
           'lat'=>$latitude,
@@ -172,13 +170,13 @@ if($result = mysqli_query($link, $sql)){
           //echo $locations;
           $markers=json_encode($locations);
           echo  '<div class="row1">';
-          echo  '<div class="cell" data-title="Name">' . $row["Name"] . '</div>';
-          echo  '<div class="cell" data-title="City">' . $row["City"] . '</div>';
-          echo  '<div class="cell" data-title="County">' . $row["County"] . '</div>';
+          echo  '<div class="cell" data-title="Name">' . $row["GP Name"] . '</div>';
+          echo  '<div class="cell" data-title="Address">' . $row["Address1"] . '</div>';
+          echo  '<div class="cell" data-title="Address2">' . $row["Address2"] . '</div>';
           echo  '<div class="cell" data-title="Postcode">' . $row["Postcode"] . '</div>';
-          echo  '<div class="cell" data-title="Phone">' . $row["Phone"] . '</div>';
-          echo  '<div class="cell" data-title="Latitude">' . $row["Latitude"] . '</div>';
-          echo  '<div class="cell" data-title="Longitude">' . $row["Longitude"] . '</div>';
+          echo  '<div class="cell" data-title="Phone Number">' . $row["Phone Number"] . '</div>';
+          echo  '<div class="cell" data-title="Latitude">' . $row["lat"] . '</div>';
+          echo  '<div class="cell" data-title="Longitude">' . $row["long"] . '</div>';
           echo  '</div>';
         }
         echo "</div>
@@ -198,14 +196,14 @@ mysqli_close($link);
   </div>
 <script>
 var map;
-//document.getElementById('submit').addEventListener('click', function() {
-     //setMarkers(resultsMap);
+document.getElementById('submit').addEventListener('click', function() {
+     setMarkers(resultsMap);
      function setMarkers(resultsMap){
      <?php echo "var markers = '$markers';\n";?>
      var infowindow = new google.maps.InfoWindow(), marker, lat, lng;
      var json = JSON.parse(markers);
      console.log(json);
-        //});
+        });
      // Loop through our array of markers & place each one on the map
 
      for( var o in json ){
@@ -228,7 +226,7 @@ var map;
 </script>
 </section>
 <script async defer
-    src="*************">
+    src="">
     </script>
 <footer>
   <p>Learn to Drive NI, Copyright &copy; 2018</p>
